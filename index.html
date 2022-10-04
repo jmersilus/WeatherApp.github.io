@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+    <title>WeatherNews 9</title>
+</head>
+<body >
+    <header class="jumbotron">
+        <h1>WeatherNews 9 Dashboard</h1>
+    </header>
+    <div class="searchBar">
+      <form id="user-form" class="card-body">
+        <h2>Search for city:</h2>
+        <input type="text" id="searchCity" autofocus="true" class="form-input col-8 d-inline align-self-stretch shadow-lg p-3 mb-5 bg-white rounded">
+        <button type="submit" class="submit btn-outline-dark col-2 shadow-lg p-3 mb-5 bg-red rounded">Search</button>
+      </form>
+       
+      
+    </div>
+
+    <div id="Locations" class="los">  
+<!--Locations buttons go here-->
+        <button class="Atl col-6 btn btn-outline-secondary">Atlanta, GA</button>
+        <button class="Den col-5 btn btn-outline-dark">Denver, CO</button>
+        <button class="Sea col-5 btn btn-outline-secondary">Seattle, WA</button>
+        <button class="San col-6 btn btn-outline-dark">San Franciso, CA</button>
+        <button class="Orl col-6 btn btn-outline-secondary">Orlando, FL</button>
+        <button class="Den col-5 btn btn-outline-dark">New York, NY</button>
+        <button class="Chi col-5 btn btn-outline-secondary">Chicago, IL</button>
+        <button class="Aus col-6 btn btn-outline-dark">Austin, TX</button>
+    </div>
+    <!-- Current location-->
+    <header class="Current border border-dark col-8 container">
+        <div id="CurrentLo" class="CurrentLoc">
+            <h2 class="currentDay col-12" id="place"><placeholder>Atl</placeholder></h2>
+            <h6 class="card-subtitle mb-2 ">Temp:</h6>
+            <h6 class="card-subtitle mb-2 ">Wind:</h6>
+            <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+            
+            <h4 id="factors" class="currentDay"></h4>
+        </div>
+    </header>
+
+    <body class="5d ">  
+        <!--Cards-->
+        <h2>5-Day Forecast:</h2>
+        <div class="container">
+          <div class="row">
+            <div class="card d-flex bd-highlight mb-3 " style="width: 18rem;">
+                <div class="card-body p-2 bd-highlight">
+                  <h5 class="card-title">10/3/2022</h5>
+                  <h6 class="card-subtitle mb-2 ">Temp:</h6>
+                  <h6 class="card-subtitle mb-2 ">Wind:</h6>
+                  <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+                </div>
+            </div>
+
+            <div class="card d-flex bd-highlight mb-3 " style="width: 18rem;">
+                <div class="card-body p-2 bd-highlight">
+                  <h5 class="card-title">10/4/2022</h5>
+                  <h6 class="card-subtitle mb-2 ">Temp:</h6>
+                  <h6 class="card-subtitle mb-2 ">Wind:</h6>
+                  <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+                </div>
+            </div>
+
+            <div class="card d-flex bd-highlight mb-3 " style="width: 18rem;">
+                <div class="card-body p-2 bd-highlight">
+                  <h5 class="card-title">10/5/2022</h5>
+                  <h6 class="card-subtitle mb-2 ">Temp:</h6>
+                  <h6 class="card-subtitle mb-2 ">Wind:</h6>
+                  <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+                </div>
+            </div>
+
+            <div class="card d-flex bd-highlight mb-3" style="width: 18rem;">
+                <div class="card-body p-2 bd-highlight">
+                  <h5 class="card-title">10/6/2022</h5>
+                  <h6 class="card-subtitle mb-2 ">Temp:</h6>
+                  <h6 class="card-subtitle mb-2 ">Wind:</h6>
+                  <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+                </div>
+            </div>
+
+            <div class="card d-flex bd-highlight mb-3" style="width: 18rem;">
+                <div class="card-body p-2 bd-highlight">
+                  <h5 class="card-title">10/7/2022</h5>
+                  <h6 class="card-subtitle mb-2 ">Temp:</h6>
+                  <h6 class="card-subtitle mb-2 ">Wind:</h6>
+                  <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+                </div>
+            </div>
+            <div class="card d-flex bd-highlight mb-3" style="width: 18rem;">
+              <div class="card-body p-2 bd-highlight">
+                <h5 class="card-title">10/8/2022</h5>
+                <h6 class="card-subtitle mb-2 ">Temp:</h6>
+                <h6 class="card-subtitle mb-2 ">Wind:</h6>
+                <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+              </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</body>
+</html>

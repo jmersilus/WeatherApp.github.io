@@ -1,0 +1,28 @@
+.jumbotron {
+    background-image: linear-gradient(to right, blue , rgb(0, 19, 44));
+    color: white;
+    text-align: right;
+}
+
+
+
+.btn{
+    padding: 20px;
+    margin: 5px;
+    color: black;
+    font-style: oblique;
+}
+
+.submit {
+    border-radius: 20px;
+}
+
+.card{
+    background-color: rgb(42, 46, 66);
+    color: white;
+    margin: 20px;
+}
+
+.Current {
+    margin: 40px;
+}
