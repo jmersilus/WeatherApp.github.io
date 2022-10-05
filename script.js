@@ -1,13 +1,24 @@
-var getLocale = function (location) {
+
+var getLocale = function (zipcode) {
     // format the github api
-    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=&lon=&exclude={part}&appid=eceee4a0024957a411954f261a712b6f";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ",us&appid=926afdc6e884f2f107e8a6acb356c651";
     //make request
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
-            console.log(data);
+            displaylocation(data, zipcode);
+            console.log(data)
         });
     });
 };
+
+var placeTempE1 = document.querySelector("#searched-temp");
+var placeSearchLocation = document.querySelector("#searched-location");
+
+var displaylocation = function(place, searchLocation){
+    placeTempE1.textcontent = "";
+    placeSearchLocation.textcontent = searchLocation;
+
+}
 
 var userFormEl = document.querySelector("#user-form");
 var nameInputEl = document.querySelector("#searchCity"); 
@@ -23,11 +34,11 @@ if (searching) {
 getLocale(searching);
 nameInputEl.value = "";
 } else {
-alert("choose valid lat");
+alert("choose valid zipcode");
 }
     console.log(formSubmitHandler);
   };
 
 userFormEl.addEventListener("submit", formSubmitHandler);
 
-var userFormE1 = document.querySelector("#user-form");
+

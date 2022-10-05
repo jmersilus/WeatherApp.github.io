@@ -28,7 +28,7 @@
     </header>
     <div class="searchBar">
       <form id="user-form" class="card-body">
-        <h2>Search for city:</h2>
+        <h2>Search for city by Zipcode:</h2>
         <input type="text" id="searchCity" autofocus="true" class="form-input col-8 d-inline align-self-stretch shadow-lg p-3 mb-5 bg-white rounded">
         <button type="submit" class="submit btn-outline-dark col-2 shadow-lg p-3 mb-5 bg-red rounded">Search</button>
       </form>
@@ -50,10 +50,10 @@
     <!-- Current location-->
     <header class="Current border border-dark col-8 container">
         <div id="CurrentLo" class="CurrentLoc">
-            <h2 class="currentDay col-12" id="place"><placeholder>Atl</placeholder></h2>
-            <h6 class="card-subtitle mb-2 ">Temp:</h6>
-            <h6 class="card-subtitle mb-2 ">Wind:</h6>
-            <h6 class="card-subtitle mb-2 ">Humidity:</h6>
+            <h2 class="currentDay col-12" id="place">Location:<span id="searched-location"></span></h2>
+            <h6 class="card-subtitle mb-2" id="searched-temp">Temp:</h6>
+            <h6 class="card-subtitle mb-2" id="searched-wind">Wind:</h6>
+            <h6 class="card-subtitle mb-2" id="searched-humid">Humidity:</h6>
             
             <h4 id="factors" class="currentDay"></h4>
         </div>
